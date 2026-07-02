@@ -1,8 +1,12 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- OTX Config ---
-API_KEY = "f2a9c2bee14b64b3345866f5661ce5741b9af760757c48678c980240403966c2"
+API_KEY = os.environ.get("OTX_API_KEY")
 OTX_URL = "https://otx.alienvault.com/api/v1/pulses/subscribed"
 
 # --- Ollama Config ---

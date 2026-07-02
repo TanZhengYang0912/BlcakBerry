@@ -2,9 +2,13 @@ import tkinter as tk
 from tkinter import ttk
 import threading
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- Config ---
-API_KEY = "f2a9c2bee14b64b3345866f5661ce5741b9af760757c48678c980240403966c2"
+API_KEY = os.environ.get("OTX_API_KEY")
 OTX_URL = "https://otx.alienvault.com/api/v1/pulses/subscribed"
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "phi3"

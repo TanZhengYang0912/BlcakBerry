@@ -1,7 +1,11 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
-API_KEY = "f2a9c2bee14b64b3345866f5661ce5741b9af760757c48678c980240403966c2"
+load_dotenv()
+
+API_KEY = os.environ.get("OTX_API_KEY")
 BASE_URL = "https://otx.alienvault.com/api/v1"
 
 
